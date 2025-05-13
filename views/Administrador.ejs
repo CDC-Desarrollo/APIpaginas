@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Style/StylePrincipal.css">
+    <link rel="stylesheet" href="/Style/AdministradorStyle.css">
+    
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <h1>ADMINISTRADOR </h1>
+        <ul class="menu">
+            <li id="M1" onclick="TablaEstados()"> Mapa</li>
+            <li id="M2" onclick="Imagen()"> Imagenes</li>
+            <li id="M3" onclick=""> Cotizaciones </li>
+            <li id="M4" onclick=""> Usuarios </li>
+        </ul>
+    </nav>
+    <div class="contenido">
+
+        <div id="Pestana" style="width: 100%; height: 100%;"></div>
+
+    </div>
+    <script src="/Scripts/Mapa.js"></script>
+    <script src="/Scripts/Administrador.js"></script>
+
+    <div class="popup" id="Contactanos">
+        <div class="overlay" onclick="togglePopupEditar()"></div>
+    <div class="content"  style=" background-color: rgba(108, 192, 74, 0.6);
+    box-sizing: border-box; border: 20px solid rgba(108, 192, 74, 0.6); border-radius: 30px; padding: 0; ">
+      <div class="cont">
+        <div class="Cerrar" onclick="togglePopupEditar()">&times;</div>
+        <h2 id="NombreEstado">Nombre</h2>
+        <div class="Informacion">
+
+          
+
+          <div class="Inf" id="InfInf">
+            <b>Informacion</b><br>
+            <textarea name="Info" id="Info"></textarea>
+          </div>
+
+          <div class="Inf" id="InfA">
+            <b>Activo</b>
+            <input type="checkbox" name="Activo" id="ActivoEstado">
+          </div>
+
+        </div>
+        <div class="enviar" style="padding: 10px;">
+          <button type="button" id="buttonActualizar"> <b>Actualizar</b></button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <div class="popup" id="editImg">
+    <div class="overlay" onclick="togglePopup()"></div>
+
+      <div class="content"  style=" background-color: rgb(255, 255, 255); box-sizing: border-box; border: 20px solid rgb(108, 192, 74); border-radius: 30px; padding: 0;; ">
+        <div class="cont">
+          <div class="Cerrar" onclick="togglePopup()">&times;</div>
+            <h1 id="EncabezadoPopup">Editar</h1>
+            <div id="contenedorImg">
+            </div>
+
+           
+            <br><br>
+            <!-- <form aid="uploadForm" enctype="multipart/form-data"> -->
+
+              <input id="inputFile" type="file" name="image" required>
+              <br>
+              <button id="SubirImagen" type="button" onclick="subirArchivo()">Cambiar imagen</button>
+            <!-- </form> -->
+            </div>
+
+         
+        </div>
+      </div>
+  
+</body>
+</html>
