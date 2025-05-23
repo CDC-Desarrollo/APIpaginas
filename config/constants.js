@@ -1,10 +1,12 @@
 const path = require('path');
 
-const PUBLIC_DIR = path.join(__dirname, '..', 'public');
+const PUBLIC_DIR = path.join(__dirname,'..', 'public');
+
+console.log(PUBLIC_DIR);
 
 const UPLOAD_BASE = {
   controldecarga: {
-    images: path.join(PUBLIC_DIR, 'controldecarga')
+    images: path.join(PUBLIC_DIR, 'controldecarga','images')
   },
   rapicarga: {
     images: path.join(PUBLIC_DIR, 'rapicarga')

@@ -5,7 +5,7 @@ const {
   UPLOAD_BASE,
   DEFAULT_UPLOAD_FOLDER,
   SUPPORTED_IMAGE_TYPES,
-  MAX_IMAGE_SIZE,
+  // MAX_IMAGE_SIZE,
 } = require('../config/constants');
 
 function createMulterMiddleware(modulo = 'controldecarga', tipo = 'images') {

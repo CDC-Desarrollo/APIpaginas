@@ -5,12 +5,11 @@ const { UPLOAD_BASE } = require('../../config/constants');
 const getImagenes = async (req, res) => {
   const carpeta = req.query.carpeta || 'default';
 
-  if (!/^[\w-]+$/.test(carpeta)) {
-    return res.status(400).json({ error: 'Nombre de carpeta inválido' });
-  }
+  console.log('Valor de req.query.carpeta:', req.query.carpeta);
+
 
   const carpetaPath = path.join(UPLOAD_BASE.controldecarga.images, carpeta);
-  console.log('📁 Ruta absoluta buscada:', carpetaPath);
+//   console.log('📁 Ruta absoluta buscada:', carpetaPath);
 
   fs.readdir(carpetaPath, (err, files) => {
     if (err) {
