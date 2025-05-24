@@ -36,8 +36,8 @@ function createMulterMiddleware(modulo = 'controldecarga', tipo = 'images') {
 
   return multer({
     storage,
-    fileFilter,
-    limits: { fileSize: MAX_IMAGE_SIZE },
+    fileFilter
+    // limits: { fileSize: MAX_IMAGE_SIZE },
   });
 }
 

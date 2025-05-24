@@ -5,3 +5,7 @@
 package-lock.json
 
 package.json
+
+.vscode
+
+public/controldecarga/Images
